@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			})
 			.catch((error) => {
 				console.error("Error fetching questions:", error);
-				showLoading(false); // Hide loading state on error
+				showLoading(false); //
 			});
 	}
 
