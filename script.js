@@ -75,6 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		incorrectAnswers,
 		questionIndex
 	) {
+
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convert days to milliseconds
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value};${expires};path=/`;
+    }
 		const allAnswers = [correctAnswer, ...incorrectAnswers].sort(
 			() => Math.random() - 0.5
 		);
@@ -105,3 +112,22 @@ document.addEventListener("DOMContentLoaded", function () {
 		//... form submission logic including setting cookies and calculating score
 	}
 });
+
+    /**
+     * Retrieves the value of a specified cookie.
+     * @param {string} name - The name of the cookie to retrieve.
+     * @returns {string} - The cookie value or an empty string if not found.
+     */
+    function getCookie(name) {
+        const cookieName = name + "=";
+        const decodedCookies = decodeURIComponent(document.cookie);
+        const cookiesArray = decodedCookies.split(';');
+        
+        for (let cookie of cookiesArray) {
+        cookie = cookie.trim();
+        if (cookie.indexOf(cookieName) === 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+        }
+        return "";
+    }
