@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	/**
-	 * Toggles the display of the loading state and question container.
+	 * Toggles display of the loading state and question container.
 	 *
 	 * @param {boolean} isLoading - Indicates whether the loading state should be shown.
 	 */
