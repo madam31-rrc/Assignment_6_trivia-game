@@ -142,7 +142,10 @@ function checkUsername() {
     const usernameInput = document.getElementById("username");
     const submitButton = document.getElementById("submit-game");
     const newPlayerButton = document.getElementById("new-player");
-  
+    const form = document.getElementById("trivia-form");
+    form.addEventListener("submit", handleFormSubmit);
+
+
     if (username) {
       // If a username is found, display a welcome message
       usernameInput.value = username;
