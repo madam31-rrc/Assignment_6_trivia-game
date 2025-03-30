@@ -131,3 +131,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return "";
     }
+
+    /**
+ * Checks if a username cookie exists and updates the UI accordingly.
+ * Called during initialization and after form submission.
+ */
+function checkUsername() {
+    const username = getCookie("username");
+  
+    const usernameInput = document.getElementById("username");
+    const submitButton = document.getElementById("submit-game");
+    const newPlayerButton = document.getElementById("new-player");
+  
+    if (username) {
+      // If a username is found, display a welcome message
+      usernameInput.value = username;
+      usernameInput.disabled = true;
+      submitButton.classList.add("hidden");
+      newPlayerButton.classList.remove("hidden");
+      alert(`Welcome back, ${username}! Ready to play again?`);
+    } else {
+      // If no username exists, reset input and buttons
+      usernameInput.value = "";
+      usernameInput.disabled = false;
+      submitButton.classList.remove("hidden");
+      newPlayerButton.classList.add("hidden");
+    }
+  }
+  
