@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     /**
-     * Retrieves the value of a specified cookie.
+     * Retrieves value of a specified cookie.
      * @param {string} name - The name of the cookie to retrieve.
      * @returns {string} - The cookie value or an empty string if not found.
      */
