@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	/**
 	 * Toggles display of the loading state and question container.
 	 *
-	 * @param {boolean} isLoading - Indicates whether the loading state should be shown.
+	 * @param {boolean} isLoading - 
 	 */
 	function showLoading(isLoading) {
 		document.getElementById("loading-container").classList = isLoading
