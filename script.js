@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
-	/**
+	/** This function dynamically generates radio buttons for each question.
 	 * Creates HTML for answer options.
 	 * @param {string} correctAnswer - The correct answer for the question.
 	 * @param {string[]} incorrectAnswers - Array of incorrect answers.
