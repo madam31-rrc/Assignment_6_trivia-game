@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	 * @param {string} correctAnswer - The correct answer for the question.
 	 * @param {string[]} incorrectAnswers - Array of incorrect answers.
 	 * @param {number} questionIndex - The index of the current question.
-	 * @returns {string} HTML string of answer options.
+	 * @returns {string} HTML string answer options.
 	 */
 	function createAnswerOptions(
 		correctAnswer,
